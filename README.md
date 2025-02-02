@@ -1,8 +1,14 @@
+Okay, here's a well-structured README.md file based on the information from the video and the project's structure. This README is designed to be comprehensive and guide users on how to set up, run, and deploy the project:
+
 # End-to-End Text Summarization Project with Hugging Face Transformers and AWS Deployment
 
 This project implements an end-to-end text summarization application using a fine-tuned Pegasus Transformer model from Hugging Face. It includes a complete pipeline from data ingestion to model deployment on AWS using GitHub Actions for CI/CD.
 
 ## Project Structure
+content_copy
+download
+Use code with caution.
+Markdown
 
 text-summarizer-project/
 ├── .github/workflows/ # GitHub Actions workflow (main.yaml)
@@ -72,18 +78,21 @@ text-summarizer-project/
 
 1. **Clone the repository:**
 
+    ```bash
     git clone <your_repository_url>
     cd text-summarizer-project
     ```
 
 2. **Create a virtual environment and install dependencies:**
 
+    ```bash
     conda create -n text-s python=3.8 -y
     conda activate text-s
     pip install -r requirements.txt
     ```
 
 3. **Set up project structure:**
+    ```bash
     python template.py
     ```
 
@@ -93,6 +102,7 @@ text-summarizer-project/
 
 5. **Run the training pipeline:**
     *   **Option 1 (Modular):**  Execute each stage individually:
+    ```bash
     python src/text_summarizer/pipeline/stage_01_data_ingestion.py
     python src/text_summarizer/pipeline/stage_02_data_validation.py
     python src/text_summarizer/pipeline/stage_03_data_transformation.py
@@ -108,6 +118,7 @@ text-summarizer-project/
     *   Modify `app.py`
     *   Run the `app.py` file
 
+    ```bash
     python app.py
     ```
 
@@ -166,18 +177,21 @@ This project uses GitHub Actions for CI/CD to deploy the application on AWS.
 
     *   In your EC2 instance terminal, execute the following commands one by one (replace placeholders with your actual values):
         *   Update package manager:
+        ```bash
         sudo apt-get update -y
         sudo apt-get upgrade -y
         ```
 
         *   Install Docker:
 
+        ```bash
         sudo apt-get install docker.io -y
         sudo usermod -aG docker $USER
         ```
 
         *   Verify Docker installation:
 
+        ```bash
         docker --version
         ```
         *   Configure GitHub Actions Runner:
@@ -223,6 +237,7 @@ This project uses GitHub Actions for CI/CD to deploy the application on AWS.
     *   Commit your changes (including `Dockerfile`, `main.yaml`, updated `README.md`, and any other changes).
     *   Push the changes to your GitHub repository:
 
+    ```bash
     git add .
     git commit -m "Add CI/CD with GitHub Actions and AWS Deployment"
     git push origin main
@@ -249,3 +264,34 @@ This project uses GitHub Actions for CI/CD to deploy the application on AWS.
 3. Click "Instance state" and then "Terminate instance."
 4. Confirm termination.
 5. **Also, delete the created IAM user and ECR repository if you don't need them anymore to maintain security and avoid any potential charges.**
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Author
+
+Bappy (YouTube: [YES WITH BAPPY](<your_youtube_channel_link>))
+
+## Acknowledgments
+
+*   Hugging Face for the Transformers library and the Pegasus model.
+*   Google for the Pegasus model.
+*   AWS for cloud services.
+*   FastAPI for the web framework.
+*   The creators of the Samsung dataset.
+content_copy
+download
+Use code with caution.
+
+Remember to:
+
+Replace placeholders (like <your_repository_url>, <your_youtube_channel_link>) with your actual information.
+
+Fill in any missing details specific to your setup.
+
+Thoroughly test the deployment to ensure everything is working as expected.
+
+Regularly update the README.md as your project evolves.
+
+This detailed README.md will be very helpful for anyone who wants to understand, use, or contribute to your text summarization project.
