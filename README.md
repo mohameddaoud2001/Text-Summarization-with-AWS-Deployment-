@@ -1,5 +1,3 @@
-Okay, here's a well-structured README.md file based on the information from the video and the project's structure. This README is designed to be comprehensive and guide users on how to set up, run, and deploy the project:
-
 # End-to-End Text Summarization Project with Hugging Face Transformers and AWS Deployment
 
 This project implements an end-to-end text summarization application using a fine-tuned Pegasus Transformer model from Hugging Face. It includes a complete pipeline from data ingestion to model deployment on AWS using GitHub Actions for CI/CD.
@@ -264,34 +262,3 @@ This project uses GitHub Actions for CI/CD to deploy the application on AWS.
 3. Click "Instance state" and then "Terminate instance."
 4. Confirm termination.
 5. **Also, delete the created IAM user and ECR repository if you don't need them anymore to maintain security and avoid any potential charges.**
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Author
-
-Bappy (YouTube: [YES WITH BAPPY](<your_youtube_channel_link>))
-
-## Acknowledgments
-
-*   Hugging Face for the Transformers library and the Pegasus model.
-*   Google for the Pegasus model.
-*   AWS for cloud services.
-*   FastAPI for the web framework.
-*   The creators of the Samsung dataset.
-content_copy
-download
-Use code with caution.
-
-Remember to:
-
-Replace placeholders (like <your_repository_url>, <your_youtube_channel_link>) with your actual information.
-
-Fill in any missing details specific to your setup.
-
-Thoroughly test the deployment to ensure everything is working as expected.
-
-Regularly update the README.md as your project evolves.
-
-This detailed README.md will be very helpful for anyone who wants to understand, use, or contribute to your text summarization project.
